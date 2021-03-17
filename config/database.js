@@ -10,9 +10,9 @@ module.exports = ({ env }) => ({
         database: env('DATABASE_NAME', 'wongames'),
         username: env('DATABASE_USERNAME', 'wongames'),
         password: env('DATABASE_PASSWORD', 'wongames'),
-        ssl: env.bool('DATABASE_SSL', false),
+        // ssl: env.bool('DATABASE_SSL', false),
       },
-      options: {}
+      options: {},
     },
   },
 });

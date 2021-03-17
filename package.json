@@ -27,7 +27,8 @@
     "strapi-plugin-graphql": "3.5.3",
     "strapi-plugin-upload": "3.5.3",
     "strapi-plugin-users-permissions": "3.5.3",
-    "strapi-utils": "3.5.3"
+    "strapi-utils": "3.5.3",
+    "unique-slug": "^2.0.2"
   },
   "author": {
     "name": "A Strapi developer"

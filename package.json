@@ -14,7 +14,7 @@
   "dependencies": {
     "jsdom": "^16.4.0",
     "knex": "<0.20.0",
-    "pg": "latest",
+    "pg": "^8.5.1",
     "slugify": "^1.4.6",
     "strapi": "3.4.4",
     "strapi-admin": "3.4.4",

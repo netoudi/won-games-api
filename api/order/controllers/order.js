@@ -6,6 +6,8 @@
  * to customize this controller
  */
 
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+
 module.exports = {
   createPaymentIntent: async (ctx) => {
     const { cart } = ctx.request.body;

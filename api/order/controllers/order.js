@@ -77,12 +77,22 @@ module.exports = {
 
     // pegar o paymentIntentId
     // pegar as informações do pagamento (paymentMethod)
+    let paymentInfo;
+    if (totalInCents !== 0) {
+      try {
+        paymentInfo = await stripe.paymentMethods.retrieve(paymentMethod);
+      } catch (err) {
+        ctx.response.status = 402;
+        return { error: err.message };
+      }
+    }
+
     // salvar no banco
     const entry = {
       total_in_cents: totalInCents,
       payment_intent_id: paymentIntentId,
-      card_brand: null,
-      card_last4: null,
+      card_brand: paymentInfo?.card?.brand,
+      card_last4: paymentInfo?.card?.last4,
       user: userInfo,
       games,
     };
